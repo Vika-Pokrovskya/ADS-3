@@ -15,31 +15,31 @@ void sort1(int *values, int si) {
 }
 
 int cbinsearch(int *arr, int size, int value) {
-sort1(arr, size);
+ sort1(arr, size);
  int low = 0;
  int right = size - 1;
  while (low <= right) {
-     int m = low + (right - low) / 2;
-     if (value > *(arr + m))
-low = m + 1;
-     else if (*(arr + m) > value)
-right = m - 1;
-     else {
-int b = 0;
-int v = m;
-int k = 1;
-int c = 0;
-while (arr[m] == arr[m + 1]) {
-        k = k + 1;
-        m = m + 1;
-}
-while (arr[v] == arr[v - 1]) {
-        c = c + 1;
-        v = v - 1;
-}
-b = k + c;
-return b;
-     }
+  int m = low + (right - low) / 2;
+  if (value > *(arr + m)) {
+   low = m + 1;
+  } else if (*(arr + m) > value) {
+   right = m - 1;
+  } else {
+   int b = 0;
+   int v = m;
+   int k = 1;
+   int c = 0;
+   while (arr[m] == arr[m + 1]) {
+    k = k + 1;
+    m = m + 1;
+    }
+   while (arr[v] == arr[v - 1]) {
+    c = c + 1;
+    v = v - 1;
+    }
+   b = k + c;
+   return b;
+  }
  }
- return 0;  
+ return 0;
 }
