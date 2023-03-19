@@ -1,17 +1,17 @@
 // Copyright 2021 NNTU-CS
-void sort1(int *values, int si) {
-  bool k = false;
-  while (!k) {
-    k = true;
-    for (int i = 0; i < si - 1; i++) {
-      if (values[i] > values[i + 1]) {
-        int t = values[i];
-        values[i] = values[i + 1];
-        values[i + 1] = t;
-        k = false;
-      }
-    }
+void sort1(int* values, int si) {
+ bool k = false;
+ while (!k) {
+  k = true;
+  for (int i = 0; i < si - 1; i++) {
+   if (values[i] > values[i + 1]) {
+    int t = values[i];
+    values[i] = values[i + 1];
+    values[i + 1] = t;
+    k = false;
+   }
   }
+ }
 }
 
 int cbinsearch(int *arr, int size, int value) {
