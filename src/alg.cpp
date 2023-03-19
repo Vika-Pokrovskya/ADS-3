@@ -14,7 +14,7 @@ void sort1(int *values, int si) {
   }
 }
 
-int binarySearch(int *arr, int value, int size) {
+int binarySearch(int *arr, int size, int value) {
   sort1(arr, size);
   int low = 0;
   int right = size - 1;
